@@ -4,29 +4,27 @@ Simple class for any c++ projects which need to automatic recycle its memory.
 ## Functions
 
 ```c++
-Start the timer.
-  SMR::run(const long long ms, int flag=SMR_LOCAL, double maxLimit=0);
-  *ms: 
-      clean memory every XX ms.
-  *flag: 
-      SMR_LOCAL - current process
-      SMR_GLOBAL - all processes
-  *maxLimit: 
-      1. 0.0 < maxLimit < 1.0 : using percent.
-      2. 1.0 <= maxLimit : using Bytes.
-Stop the timer.
-  SMR::stop();
+SMR::run(const long long ms, int flag=SMR_LOCAL, double maxLimit=0); // Start the timer.
+*ms: 
+    clean memory every XX ms.
+*flag: 
+    SMR_LOCAL - current process
+    SMR_GLOBAL - all processes
+*maxLimit: 
+    1. 0.0 < maxLimit < 1.0 : using percent.
+    2. 1.0 <= maxLimit : using Bytes.
 
-Get physical memory size.
-  SMR::getPhysicalMemorySize();
+SMR::stop(); // Stop the timer.
+
+SMR::getPhysicalMemorySize(); // Get physical memory size.
   
-Get physical memory size.
-  SMR::getLocalMemoryValue();
+
+SMR::getLocalMemoryValue(); // Get physical memory size.
   
-Get global memory value.
-  SMR::getGlobalMemoryValue(bool percent=true);
-  *percent:
-      display percent or bytes.
+
+SMR::getGlobalMemoryValue(bool percent=true); // Get global memory value.
+*percent:
+    display percent or bytes.
 ```
 
 ## Usage
